@@ -1,7 +1,7 @@
-package se.linerotech.myapplication
+package com.example.myownapplication
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
