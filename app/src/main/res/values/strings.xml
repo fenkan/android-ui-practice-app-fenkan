@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My own application</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="please_select_an_option">Please select an option</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
 </resources>
