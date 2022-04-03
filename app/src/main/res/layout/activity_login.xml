@@ -11,6 +11,7 @@
 
 
     <EditText
+        android:id="@+id/enterEmailLoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -23,6 +24,7 @@
 
 
     <EditText
+        android:id="@+id/enterPasswordLoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -32,9 +34,17 @@
         android:fontFamily="monospace"/>
 
     <Button
+        android:id="@+id/loginButtonMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
+        android:fontFamily="monospace"/>
+
+    <Button
+        android:id="@+id/backToMainMenuFromLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_main_menu"
         android:fontFamily="monospace"/>
 
 </LinearLayout>

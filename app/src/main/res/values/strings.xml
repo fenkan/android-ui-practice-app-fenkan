@@ -7,4 +7,10 @@
     <string name="enter_email">Enter email</string>
     <string name="password">Password</string>
     <string name="enter_password">Enter password</string>
+    <string name="signup_name">Name</string>
+    <string name="password_must_be_6_characters_long">Password must be 6 characters long</string>
+    <string name="email_example">Ex: felixjohansson@gmail.com</string>
+    <string name="back_to_main_menu">Back to main menu</string>
+    <string name="email_cannot_be_empty">Email cannot be empty</string>
+    <string name="login_was_successful">Login was successful</string>
 </resources>
