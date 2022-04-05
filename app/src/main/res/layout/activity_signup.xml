@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity"
     android:background="@drawable/skog"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:text="@string/signup_name"
-        android:textSize="20dp"
-        android:fontFamily="monospace"/>
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/signupName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:fontFamily="monospace"/>
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:maxLines="1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:text="@string/email"
-        android:textSize="20dp"
-        android:fontFamily="monospace"/>
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/signupEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:hint="@string/email_example"
-        android:gravity="center"/>
+        android:maxLines="1"
+        android:autofillHints=""
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:text="@string/password"
-        android:textSize="20dp"
-        android:fontFamily="monospace"/>
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/signupPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:hint="@string/password_must_be_6_characters_long"
-        android:gravity="center"/>
+        android:inputType="textPassword"
+        />
 
     <Button
         android:id="@+id/signupMenuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up"
         android:fontFamily="monospace"
-        />
+        android:text="@string/sign_up" />
+
     <Button
         android:id="@+id/back_to_main_menu_from_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/back_to_main_menu"
-        android:fontFamily="monospace"/>
+        android:fontFamily="monospace"
+        android:text="@string/back_to_main_menu" />
 
 
 </LinearLayout>

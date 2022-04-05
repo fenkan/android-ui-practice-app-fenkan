@@ -20,23 +20,16 @@ class MainActivity : AppCompatActivity(){
 
         //binding the buttons
         binding.loginButton.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(intent)
         }
 
         binding.signupButton.setOnClickListener {
-            val intent2 = Intent(this, SignupActivity:: class.java)
+            val intent2 = Intent(this@MainActivity, SignupActivity:: class.java)
             startActivity(intent2)
         }
 
 
-
-
-
-
     }
-
-
-
 
 }

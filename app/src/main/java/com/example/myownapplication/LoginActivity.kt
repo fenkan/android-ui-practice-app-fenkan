@@ -1,38 +1,53 @@
 package com.example.myownapplication
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.TextView
 import android.widget.Toast
 import com.example.myownapplication.databinding.ActivityLoginBinding
-import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
 
     //defining the variables
     private lateinit var binding: ActivityLoginBinding
 
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState
-        )
-        setContentView(binding.root)
+        super.onCreate(savedInstanceState)
 
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         //binding the buttons
         binding.backToMainMenuFromLogin.setOnClickListener {
-            val intentLogin = Intent(this, MainActivity::class.java)
-            startActivity(intentLogin)
+           finish()
+        }
+        //making sure the email is not empty
+        binding.loginButtonMenu.setOnClickListener {
+            if (binding.enterEmailLoginMenu.text.isEmpty() || binding.enterEmailLoginMenu.text.isBlank()) {
+            Toast.makeText(this, ("Email cannot be empty"), Toast.LENGTH_LONG).show()
+            }else {
+                if (!isEmailValid(binding.enterEmailLoginMenu.text.toString())) {
+            Toast.makeText(this, "Email format is not valid", Toast.LENGTH_LONG).show()
+                }
+                else {
+                    if (binding.enterPasswordLoginMenu.text.isEmpty() || binding.enterPasswordLoginMenu.text.isBlank()) {
+                        Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_LONG).show()
+                    }
+                    else {
+                        Toast.makeText(this, "Login was successful", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        }
         }
 
+    private fun isEmailValid(email: String): Boolean {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
-
-
-
-        }
     }
+
+
+}
+
